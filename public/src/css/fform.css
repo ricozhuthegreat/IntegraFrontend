@@ -1,15 +1,4 @@
 
-#grad-bar {
-  margin-top: -11vh;
-  margin-left: -11vh;
-  margin-bottom: 10vh;
-  border-radius: 10px 10px 0px 0px;
-  width: 120%;
-  background: linear-gradient(60deg, orange, rgba(255,0,173,1));
-  height: 8vh !important;
-  transition: 0.5s;
-}
-
 form {
   position: absolute;
   top: 12%;
