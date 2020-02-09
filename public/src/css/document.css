@@ -126,19 +126,17 @@ img.widget-img-right {}
 }
 
 #side-header {
-  display: table;
+  margin-left: -2vh;
   /* border-bottom: 2px solid #f2f2f2; */
   margin-bottom: 6vh;
 }
 
 #side-header-icon {
-  display: table-cell;
-  width: 12vh;
-  height: 12vh;
+  width: 50vh;
+  height: 20vh;
 }
 
 #side-header-text {
-  display: table-cell;
   font-size: 5vh;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
