@@ -16,13 +16,27 @@ document.getElementById('logout').onclick = () => {
 // The global firebase database object
 let db = firebase.database();
 
-// Get the currently singed in user
-let user = firebase.auth().currentUser;
+// Get the currently singed in user and the username
+let cUser;
+let username;
 
-let username = user.email;
+// Event Listener for DOM user update. Update intro text and update user related variables
+firebase.auth().onAuthStateChanged(function(user) {
+
+  // Update the user-related variables
+  cUser = user;
+  username = cUser.email;
+
+  // Concatenate the username string from the email
+  username = username.substring(0, username.indexOf("@"));
+
+  // Update the user display info
+  updateUserDisplay();
+
+});
 
 // Database tester code
-document.getElementById('ask').onclick = () => {
+document.getElementById('user-info').onclick = () => {
 
   // Retreive the current user reference in the realtime database
   let user_dbRef = db.ref().child("users").child(username).child("post");
@@ -50,3 +64,6 @@ user_read.on('value', function(snapshot) {
 });
 
 // Update the document.html user display name info field
+function updateUserDisplay () {
+  document.getElementById("user-info").innerText = username;
+}
