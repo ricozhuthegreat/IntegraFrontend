@@ -18,6 +18,8 @@
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 80%;
+  font-family: 'Lato', sans-serif;
+  color: #a8a8a8;
 }
 
 .card:hover {
@@ -158,7 +160,7 @@ img.widget-img-right {}
 }
 
 #ask:hover {
-  border: 2px solid grey;
+  border: 1px solid grey;
   background-color: white;
 }
 
@@ -168,6 +170,12 @@ img.widget-img-right {}
   font-family: 'Lato', sans-serif;
   font-size: 3vh;
   color: #a8a8a8;
+}
+
+#suggestions.card {
+  margin-top: 5vh;
+  visibility: hidden;
+  transition: 0.3s;
 }
 
 ::-webkit-scrollbar {
