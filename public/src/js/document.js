@@ -19,10 +19,10 @@ let db = firebase.database();
 // Get the currently singed in user
 let user = firebase.auth().currentUser;
 
-let username = "ricozhuthegreat";
+let username = user.email;
 
 // Database tester code
-document.getElementById('poststuff').onclick = () => {
+document.getElementById('ask').onclick = () => {
 
   let user_dbRef = db.ref().child("users").child(username).child("post");
 
@@ -41,3 +41,5 @@ let user_read = firebase.database().ref('users/' + username + '/read');
 user_read.on('value', function(snapshot) {
   console.log(snapshot.val());
 });
+
+// Update the document.html user display name info field
